@@ -1,0 +1,7 @@
+digraph "pfg.dot" {
+	0 [label="START [0]" shape=diamond]
+	3 [label="codeDiff <variable-decl> [3]" shape=ellipse]
+	2 [label="write_excel_xls_append <variable-decl> [2]" shape=ellipse]
+	1 [label="create_excel_xls <variable-decl> [1]" shape=ellipse]
+	4 [label="extractPatch <variable-decl> [4]" shape=ellipse]
+}

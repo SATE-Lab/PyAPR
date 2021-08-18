@@ -1,0 +1,174 @@
+html, body, div, span {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 8px;
+}
+
+a {
+    color: rebeccapurple;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#commit_hash, #repo, .title {
+    color: black;
+    margin: 4px 0;
+}
+
+#before_code_block, #after_code_block {
+    margin-top: 24px;
+}
+
+#before_code_block .title, #after_code_block .title {
+    cursor: pointer;
+}
+
+#repo a {
+    font-size: 16px;
+    margin: 4px 0;
+}
+
+.code {
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    cursor: default;
+}
+
+.code .highlighted {
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+}
+
+.code .highlighted div,
+.code .highlighted span {
+    opacity: 1;
+}
+
+.code .line {
+    display: table-row;
+    cursor: default;
+    pointer-events: none;
+}
+
+.code .line:hover {
+    text-decoration: none;
+}
+
+.code .line .line-content {
+    display: table-cell;
+    width: 100%;
+
+    padding-left: 4px;
+    margin: 0;
+
+    color: rgba(68,68,68,.3);
+    font-size: 14px;
+}
+
+.code .line .line-number {
+    display: table-cell;
+    vertical-align: middle;
+
+    font-size: 14px;
+    margin: 0 8px 0 0;
+    padding: 0 4px;
+
+    text-align: right;
+
+    color: #0052cc;
+    background-color: white;
+    border-right: 1px solid #dfe1e6;
+
+    user-select: none;
+}
+
+.code .line.clickable {
+    pointer-events: all;
+}
+
+.code .line.clickable:hover {
+    cursor: pointer;
+}
+
+.code .line.clickable:hover .line-content {
+    background-color: #fcf160;
+}
+
+.title {
+    width: auto;
+    display: inline-block;
+}
+
+.title:hover {
+    text-decoration: underline;
+}
+
+.item {
+    float: left;
+    clear: left;
+}
+
+.pattern-instance.pattern-repr::before {
+    content: 'Representative';
+    color: red;
+}
+
+.copy-icon {
+    cursor: pointer;
+}
+
+[data-action="visibility"] {
+    cursor: pointer;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    color: #1f7199;
+}
+
+[data-action="visibility"].title:hover {
+    text-decoration: underline;
+}
+
+#sample_id {
+    font-weight: bold;
+    color: black;
+}
+
+.expand-btn {
+    display: none;
+    cursor: pointer;
+    width: 1px;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    font-size: 10px;
+    color: #1f7199;
+}
+
+.expand-btn:hover {
+    transform: scale(1.5);
+}
+
+.expand-btn[data-kind="top"]::after, .expand-btn[data-kind="bottom"]::after {
+    content: 'expand';
+}
+
+.expand-btn.expanded[data-kind="top"]::after, .expand-btn.expanded[data-kind="bottom"]::after {
+    content: 'minimize';
+}
+
+#after_code_block {
+    margin-bottom: 32px;
+}

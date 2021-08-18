@@ -1,0 +1,1836 @@
+[12.08.2021 19:47:09] INFO: Parsing completed, code = 
+a = 1
+    
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Assign object at 0x105a80940> line = a = 1
+ 
+[12.08.2021 19:47:09] INFO: Parsing completed, code = 
+a = 1
+b = a
+    
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Assign object at 0x105a800d0> line = a = 1
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Assign object at 0x105a801f0> line = b = a
+ 
+[12.08.2021 19:47:09] INFO: Parsing completed, code = 
+a = (1, 2, 3)
+    
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Assign object at 0x1059d43a0> line = a = (1, 2, 3)
+ 
+[12.08.2021 19:47:09] INFO: Parsing completed, code = 
+a.b.c = 1
+        
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Assign object at 0x105a63a00> line = a.b.c = 1
+ 
+[12.08.2021 19:47:09] INFO: Parsing completed, code = 
+self.o.fn()
+    
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Expr object at 0x1059b58e0> line = self.o.fn()
+ 
+[12.08.2021 19:47:09] INFO: Parsing completed, code = 
+self.field.value = 20
+value = 14
+a = (self.field.value, value)
+    
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Assign object at 0x1059c5490> line = self.field.value = 20
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Assign object at 0x1059c5b50> line = value = 14
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Assign object at 0x1059c5040> line = a = (self.field.value, value)
+ 
+[12.08.2021 19:47:09] INFO: Parsing completed, code = 
+self.o.fn().param = 14
+print(self.o.fn().param)
+    
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Assign object at 0x105a580d0> line = self.o.fn().param = 14
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Expr object at 0x105a580a0> line = print(self.o.fn().param)
+ 
+[12.08.2021 19:47:09] INFO: Parsing completed, code = 
+m, n = data.shape
+        
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Assign object at 0x1059df070> line = m, n = data.shape
+ 
+[12.08.2021 19:47:09] INFO: Parsing completed, code = 
+i = 0
+while i < 10:
+    i += 1
+print(i)
+    
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Assign object at 0x105ab2dc0> line = i = 0
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.AugAssign object at 0x105ab2c40> line =     i += 1
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.While object at 0x105ab2d30> line = while i < 10:
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Expr object at 0x105ab2c70> line = print(i)
+ 
+[12.08.2021 19:47:09] INFO: Parsing completed, code = 
+a = 10
+if a < 10:          
+    print('inner')
+print('after')
+    
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Assign object at 0x105a80b50> line = a = 10
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Expr object at 0x105a80af0> line =     print('inner')
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.If object at 0x105a80c70> line = if a < 10:          
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Expr object at 0x105a807c0> line = print('after')
+ 
+[12.08.2021 19:47:09] INFO: Parsing completed, code = 
+a = 10
+if a < 10:
+    print('inner')
+    return
+print('after')
+    
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Assign object at 0x105aba370> line = a = 10
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Expr object at 0x105ab2430> line =     print('inner')
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Return object at 0x105ab2d60> line =     return
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.If object at 0x105ab2970> line = if a < 10:
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Expr object at 0x105ab2eb0> line = print('after')
+ 
+[12.08.2021 19:47:09] INFO: Parsing completed, code = 
+a = 10
+if a < 10:
+    print('inner')
+else:
+    print('inner2')
+print('after')
+    
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Assign object at 0x105a58190> line = a = 10
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Expr object at 0x105a582b0> line =     print('inner')
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Expr object at 0x105a58340> line =     print('inner2')
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.If object at 0x105a58790> line = if a < 10:
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Expr object at 0x105a58820> line = print('after')
+ 
+[12.08.2021 19:47:09] INFO: Parsing completed, code = 
+a = 10
+if a < 10:
+    print('inner')
+    return
+else:
+    print('inner2')
+print('after')
+        
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Assign object at 0x105a63a60> line = a = 10
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Expr object at 0x105ab2fd0> line =     print('inner')
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Return object at 0x105ab29d0> line =     return
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Expr object at 0x105ab29a0> line =     print('inner2')
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.If object at 0x105ab2eb0> line = if a < 10:
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Expr object at 0x105ab2fa0> line = print('after')
+ 
+[12.08.2021 19:47:09] INFO: Parsing completed, code = 
+a = 10
+if a < 10:
+    print('inner')
+else:
+    print('inner2')
+    return
+print('after')
+        
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Assign object at 0x105aba670> line = a = 10
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Expr object at 0x105abaf10> line =     print('inner')
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Expr object at 0x105aba5b0> line =     print('inner2')
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Return object at 0x105abaac0> line =     return
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.If object at 0x105abaca0> line = if a < 10:
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Expr object at 0x105abaa90> line = print('after')
+ 
+[12.08.2021 19:47:09] INFO: Parsing completed, code = 
+a = 10
+if a > 10:
+    if a > 100:
+        return
+    
+print('after')
+    
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Assign object at 0x105ad2a60> line = a = 10
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Return object at 0x105ad2850> line =         return
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.If object at 0x105ad2910> line =     if a > 100:
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.If object at 0x105ad29d0> line = if a > 10:
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Expr object at 0x105ad2820> line = print('after')
+ 
+[12.08.2021 19:47:09] INFO: Parsing completed, code = 
+arr = [1, 2, 3]
+for _ in arr:
+    print('inner')
+
+print('after')
+    
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Assign object at 0x1059b5c40> line = arr = [1, 2, 3]
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Expr object at 0x105aba940> line =     print('inner')
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.For object at 0x105aba490> line = for _ in arr:
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Expr object at 0x105aba0a0> line = print('after')
+ 
+[12.08.2021 19:47:09] INFO: Parsing completed, code = 
+a = 10
+assert a < 10          
+print('after')
+        
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Assign object at 0x105ad2c10> line = a = 10
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Assert object at 0x105ad2b80> line = assert a < 10          
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Expr object at 0x105ad24c0> line = print('after')
+ 
+[12.08.2021 19:47:09] INFO: Parsing completed, code = 
+a = 10
+if a > 10:
+    if a > 200:
+        if a > 100:
+            pass
+        else:
+            return
+    
+print('test')
+print('test2')
+    
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Assign object at 0x105ab2d00> line = a = 10
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Pass object at 0x105ad2460> line =             pass
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Return object at 0x105ad2490> line =             return
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.If object at 0x1059b5520> line =         if a > 100:
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.If object at 0x105ab2c10> line =     if a > 200:
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.If object at 0x105ab22b0> line = if a > 10:
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Expr object at 0x105ad2580> line = print('test')
+ 
+[12.08.2021 19:47:09] INFO: Successfully proceed expr = <ast.Expr object at 0x105ac4f40> line = print('test2')
+ 
+[12.08.2021 19:47:56] INFO: Adjacent nodes cnt = 3 
+[12.08.2021 19:47:56] INFO: pid99552: Done hash calculations, buckets=1 
+[12.08.2021 19:47:56] INFO: pid99552: Remove duplicates: affected 0 items 
+[12.08.2021 19:47:56] INFO: pid99552: A new group has been created, len = 1 
+[12.08.2021 19:47:56] INFO: pid99552: Done hash calculations, buckets=1 
+[12.08.2021 19:47:56] INFO: pid99552: Remove duplicates: affected 0 items 
+[12.08.2021 19:47:56] INFO: pid99552: A new group has been created, len = 2 
+[12.08.2021 19:47:56] INFO: pid99552: Done hash calculations, buckets=2 
+[12.08.2021 19:47:56] INFO: pid99552: Remove duplicates: affected 0 items 
+[12.08.2021 19:47:56] INFO: pid99552: A new group has been created, len = 1 
+[12.08.2021 19:47:56] INFO: pid99552: Remove duplicates: affected 0 items 
+[12.08.2021 19:47:56] INFO: pid99552: A new group has been created, len = 2 
+[12.08.2021 19:47:56] INFO: pid99552: Done hash calculations, buckets=1 
+[12.08.2021 19:47:56] INFO: pid99552: Remove duplicates: affected 0 items 
+[12.08.2021 19:47:56] INFO: pid99552: A new group has been created, len = 1 
+[12.08.2021 19:48:09] WARNING: pid99565: Change graph building... 
+[12.08.2021 19:48:09] INFO: Parsing completed, code = 
+a = [1,2,3]
+for i in range(len(a)):
+    print(i)
+    
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Assign object at 0x10eec1a00> line = a = [1,2,3]
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Expr object at 0x10eec1d30> line =     print(i)
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.For object at 0x10eec1b20> line = for i in range(len(a)):
+ 
+[12.08.2021 19:48:09] INFO: Parsing completed, code = 
+a = [4,5,6]
+for i in range(len(a)):
+    print(i)
+    
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Assign object at 0x10eec1bb0> line = a = [4,5,6]
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Expr object at 0x10eee9ac0> line =     print(i)
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.For object at 0x10eee9c10> line = for i in range(len(a)):
+ 
+[12.08.2021 19:48:09] WARNING: pid99565: Flow graphs... OK 11ms 
+[12.08.2021 19:48:09] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:48:09] WARNING: pid99565: Change graph building... 
+[12.08.2021 19:48:09] INFO: Parsing completed, code = 
+a = 10
+b = a + 1
+    
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Assign object at 0x10ef56c10> line = a = 10
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Assign object at 0x10ef565b0> line = b = a + 1
+ 
+[12.08.2021 19:48:09] INFO: Parsing completed, code = 
+d = 12
+b = d + 1
+    
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Assign object at 0x10eef86a0> line = d = 12
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Assign object at 0x10eef8610> line = b = d + 1
+ 
+[12.08.2021 19:48:09] WARNING: pid99565: Flow graphs... OK 10ms 
+[12.08.2021 19:48:09] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:48:09] WARNING: pid99565: Change graph building... 
+[12.08.2021 19:48:09] INFO: Parsing completed, code = 
+def test(self):
+    a = self.attr.field
+    
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Assign object at 0x10eef84c0> line =     a = self.attr.field
+ 
+[12.08.2021 19:48:09] INFO: Parsing completed, code = 
+def test(self):
+    a = self.attr2.field
+    
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Assign object at 0x10eef2d30> line =     a = self.attr2.field
+ 
+[12.08.2021 19:48:09] WARNING: pid99565: Flow graphs... OK 5ms 
+[12.08.2021 19:48:09] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:48:09] WARNING: pid99565: Change graph building... 
+[12.08.2021 19:48:09] INFO: Parsing completed, code = 
+def test(self):
+    a = self.attr.call()
+    
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Assign object at 0x10ef554c0> line =     a = self.attr.call()
+ 
+[12.08.2021 19:48:09] INFO: Parsing completed, code = 
+def test(self):
+    a = self.attr.call2()
+    
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Assign object at 0x10edff3d0> line =     a = self.attr.call2()
+ 
+[12.08.2021 19:48:09] WARNING: pid99565: Flow graphs... OK 6ms 
+[12.08.2021 19:48:09] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:48:09] WARNING: pid99565: Change graph building... 
+[12.08.2021 19:48:09] INFO: Parsing completed, code = 
+def test(self):
+    a = self.attr.call().val
+    
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Assign object at 0x10eec18e0> line =     a = self.attr.call().val
+ 
+[12.08.2021 19:48:09] INFO: Parsing completed, code = 
+def test(self):
+    a = self.attr.call().val2
+    
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Assign object at 0x10eeb98e0> line =     a = self.attr.call().val2
+ 
+[12.08.2021 19:48:09] WARNING: pid99565: Flow graphs... OK 5ms 
+[12.08.2021 19:48:09] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:48:09] WARNING: pid99565: Change graph building... 
+[12.08.2021 19:48:09] INFO: Parsing completed, code = 
+def m():
+    self.a.b.c.d.e = self.get_value()
+    print(self.a.b.c.d.e)
+    
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Assign object at 0x10ef55ac0> line =     self.a.b.c.d.e = self.get_value()
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Expr object at 0x10ef557c0> line =     print(self.a.b.c.d.e)
+ 
+[12.08.2021 19:48:09] INFO: Parsing completed, code = 
+def m():
+    self.a.b.c.d.e = self.get_value()
+    if self.a.b.c.d.e is not None:
+        print(self.a.b.c.d.e)
+    
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Assign object at 0x10eef2790> line =     self.a.b.c.d.e = self.get_value()
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Expr object at 0x10eef2820> line =         print(self.a.b.c.d.e)
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.If object at 0x10eef20a0> line =     if self.a.b.c.d.e is not None:
+ 
+[12.08.2021 19:48:09] WARNING: pid99565: Flow graphs... OK 15ms 
+[12.08.2021 19:48:09] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:48:09] WARNING: pid99565: Change graph building... 
+[12.08.2021 19:48:09] INFO: Parsing completed, code = 
+def remove_interface_permanent(zone, interface):
+    fw_zone = fw.config().getZoneByName(zone)
+    fw_settings = fw_zone.getSettings()
+    fw_settings.removeInterface(interface)
+    fw_zone.update(fw_settings)
+    
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Assign object at 0x10ef97190> line =     fw_zone = fw.config().getZoneByName(zone)
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Assign object at 0x10ef97e50> line =     fw_settings = fw_zone.getSettings()
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Expr object at 0x10ef97070> line =     fw_settings.removeInterface(interface)
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Expr object at 0x10ef971f0> line =     fw_zone.update(fw_settings)
+ 
+[12.08.2021 19:48:09] INFO: Parsing completed, code = 
+def remove_interface_permanent(zone, interface):
+    fw_zone, fw_settings = get_fw_zone_settings(zone)
+    fw_settings.removeInterface(interface)
+    update_fw_settings(fw_zone, fw_settings)
+    
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Assign object at 0x10ef770d0> line =     fw_zone, fw_settings = get_fw_zone_settings(zone)
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Expr object at 0x10ef77280> line =     fw_settings.removeInterface(interface)
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Expr object at 0x10ef62a60> line =     update_fw_settings(fw_zone, fw_settings)
+ 
+[12.08.2021 19:48:09] WARNING: pid99565: Flow graphs... OK 11ms 
+[12.08.2021 19:48:09] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:48:09] WARNING: pid99565: Change graph building... 
+[12.08.2021 19:48:09] INFO: Parsing completed, code = 
+def get_a():
+    a = int(input())
+
+    print(a)
+    return a
+    
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Assign object at 0x10ef582b0> line =     a = int(input())
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Expr object at 0x10ef58580> line =     print(a)
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Return object at 0x10ef58dc0> line =     return a
+ 
+[12.08.2021 19:48:09] INFO: Parsing completed, code = 
+def get_a():
+    a = int(input())
+    if a > 100:
+        print('overdraft')
+        return None
+
+    print(a)
+    return a
+    
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Assign object at 0x10ef7be20> line =     a = int(input())
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Expr object at 0x10ef7bc40> line =         print('overdraft')
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Return object at 0x10ef7bb20> line =         return None
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.If object at 0x10ef7bd00> line =     if a > 100:
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Expr object at 0x10ef7bac0> line =     print(a)
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Return object at 0x10ef7ba00> line =     return a
+ 
+[12.08.2021 19:48:09] WARNING: pid99565: Flow graphs... OK 39ms 
+[12.08.2021 19:48:09] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:48:09] WARNING: pid99565: Change graph building... 
+[12.08.2021 19:48:09] INFO: Parsing completed, code = 
+def test_create_output(self):
+    graph.add_node(Dense(32, 16), name='dense1', input='input1')
+    
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Expr object at 0x10ef62880> line =     graph.add_node(Dense(32, 16), name='dense1', input='input1')
+ 
+[12.08.2021 19:48:09] INFO: Parsing completed, code = 
+def test_create_output(self):
+    graph.add_node(Dense(16, input_shape=(32,)), name='dense1', input='input1')
+    
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Expr object at 0x10ef77760> line =     graph.add_node(Dense(16, input_shape=(32,)), name='dense1', input='input1')
+ 
+[12.08.2021 19:48:09] WARNING: pid99565: Flow graphs... OK 13ms 
+[12.08.2021 19:48:09] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:48:09] WARNING: pid99565: Change graph building... 
+[12.08.2021 19:48:09] INFO: Parsing completed, code = 
+def test_separable_conv_2d():
+    def b():
+        print('hello')
+    print2(b)
+    
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.FunctionDef object at 0x10efbbb80> line =     def b():
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Expr object at 0x10efbb430> line =     print2(b)
+ 
+[12.08.2021 19:48:09] INFO: Parsing completed, code = 
+def test_separable_conv_2d():
+    def a():
+        print('hello')
+    print(a)
+    
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.FunctionDef object at 0x10ef58250> line =     def a():
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Expr object at 0x10ef58850> line =     print(a)
+ 
+[12.08.2021 19:48:09] WARNING: pid99565: Flow graphs... OK 4ms 
+[12.08.2021 19:48:09] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:48:09] WARNING: pid99565: Change graph building... 
+[12.08.2021 19:48:09] INFO: Parsing completed, code = 
+def test_usecols_list(self, ext):
+    df1 = self.get_exceldf('test1', ext, 'Sheet1', index_col=0, usecols=[0, 2, 3])
+    df2 = self.get_exceldf('test1', ext, 'Sheet2', skiprows=[1], index_col=0, usecols=[0, 2, 3])
+    
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Assign object at 0x10ef56df0> line =     df1 = self.get_exceldf('test1', ext, 'Sheet1', index_col=0, usecols=[0, 2, 3])
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Assign object at 0x10ef56940> line =     df2 = self.get_exceldf('test1', ext, 'Sheet2', skiprows=[1], index_col=0, usecols=[0, 2, 3])
+ 
+[12.08.2021 19:48:09] INFO: Parsing completed, code = 
+def test_usecols_list(self, ext):
+    df1 = pd.read_excel('test1' + ext, 'Sheet1', index_col=0, usecols=[0, 2, 3])
+    df2 = pd.read_excel('test1' + ext, 'Sheet2', skiprows=[1], index_col=0, usecols=[0, 2, 3])
+    
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Assign object at 0x10ef929d0> line =     df1 = pd.read_excel('test1' + ext, 'Sheet1', index_col=0, usecols=[0, 2, 3])
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Assign object at 0x10ef92310> line =     df2 = pd.read_excel('test1' + ext, 'Sheet2', skiprows=[1], index_col=0, usecols=[0, 2, 3])
+ 
+[12.08.2021 19:48:09] WARNING: pid99565: Flow graphs... OK 18ms 
+[12.08.2021 19:48:09] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:48:09] WARNING: pid99565: Change graph building... 
+[12.08.2021 19:48:09] INFO: Parsing completed, code = 
+def test_sequences(self):
+    self.assertTrue(func(np.array(dtype=np.int32)) < np.array([[1], [0]]))
+    
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Expr object at 0x10eb92910> line =     self.assertTrue(func(np.array(dtype=np.int32)) < np.array([[1], [0]]))
+ 
+[12.08.2021 19:48:09] INFO: Parsing completed, code = 
+def test_sequences(self):
+    input_data = np.array(dtype=np.int32)
+    expected = np.array([[1], [0]])
+    output = func(input_data)
+    self.assertTrue(np.all(output == expected))
+    
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Assign object at 0x10ef720d0> line =     input_data = np.array(dtype=np.int32)
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Assign object at 0x10ef72940> line =     expected = np.array([[1], [0]])
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Assign object at 0x10ef72910> line =     output = func(input_data)
+ 
+[12.08.2021 19:48:09] INFO: Successfully proceed expr = <ast.Expr object at 0x10ef72e50> line =     self.assertTrue(np.all(output == expected))
+ 
+[12.08.2021 19:48:09] WARNING: pid99565: Flow graphs... OK 14ms 
+[12.08.2021 19:48:09] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:48:09] WARNING: pid99565: Change graph building... 
+[12.08.2021 19:48:09] INFO: Parsing completed, code = 
+def _real_extract(self):
+    video_id = '1'
+    video_info_webpage = self._download_webpage(
+        'base_url' + video_id, video_id,
+        note=u'Downloading video info page')
+    video_info = xml.etree.ElementTree.fromstring(video_info_webpage)
+    
+ 
+[12.08.2021 19:48:10] INFO: Successfully proceed expr = <ast.Assign object at 0x10eef8bb0> line =     video_id = '1'
+ 
+[12.08.2021 19:48:10] INFO: Successfully proceed expr = <ast.Assign object at 0x10eef8cd0> line =     video_info_webpage = self._download_webpage(
+ 
+[12.08.2021 19:48:10] INFO: Successfully proceed expr = <ast.Assign object at 0x10eef8700> line =     video_info = xml.etree.ElementTree.fromstring(video_info_webpage)
+ 
+[12.08.2021 19:48:10] INFO: Parsing completed, code = 
+def _real_extract(self):
+    video_id = '1'
+    video_info = self._download_xml(
+        'base_url' + video_id, video_id,
+        note=u'Downloading video info page')
+    
+ 
+[12.08.2021 19:48:10] INFO: Successfully proceed expr = <ast.Assign object at 0x10efccd60> line =     video_id = '1'
+ 
+[12.08.2021 19:48:10] INFO: Successfully proceed expr = <ast.Assign object at 0x10efcccd0> line =     video_info = self._download_xml(
+ 
+[12.08.2021 19:48:10] WARNING: pid99565: Flow graphs... OK 15ms 
+[12.08.2021 19:48:10] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:48:10] WARNING: pid99565: Change graph building... 
+[12.08.2021 19:48:10] INFO: Parsing completed, code = 
+def skew(self, axis=0, skipna=True, level=None):
+    if not level is None:
+        skewfunc = lambda x: x.skew(skipna=skipna)
+        return self.groupby(level).aggregate(skewfunc)
+    
+ 
+[12.08.2021 19:48:10] INFO: Successfully proceed expr = <ast.Assign object at 0x10eba5eb0> line =         skewfunc = lambda x: x.skew(skipna=skipna)
+ 
+[12.08.2021 19:48:10] INFO: Successfully proceed expr = <ast.Return object at 0x10eba5310> line =         return self.groupby(level).aggregate(skewfunc)
+ 
+[12.08.2021 19:48:10] INFO: Successfully proceed expr = <ast.If object at 0x10eba5fa0> line =     if not level is None:
+ 
+[12.08.2021 19:48:10] INFO: Parsing completed, code = 
+def skew(self, axis=0, skipna=True, level=None):
+    if level is not None:
+        return self._agg_by_level('skew', level, axis=axis, skipna=skipna)
+    
+ 
+[12.08.2021 19:48:10] INFO: Successfully proceed expr = <ast.Return object at 0x10efbcd30> line =         return self._agg_by_level('skew', level, axis=axis, skipna=skipna)
+ 
+[12.08.2021 19:48:10] INFO: Successfully proceed expr = <ast.If object at 0x10efbcdf0> line =     if level is not None:
+ 
+[12.08.2021 19:48:10] WARNING: pid99565: Flow graphs... OK 14ms 
+[12.08.2021 19:48:10] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:48:32] WARNING: pid99592: Change graph building... 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+a = [1,2,3]
+for i in range(len(a)):
+    print(i)
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x10500fa00> line = a = [1,2,3]
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Expr object at 0x10500fd30> line =     print(i)
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.For object at 0x10500fb20> line = for i in range(len(a)):
+ 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+a = [4,5,6]
+for i in range(len(a)):
+    print(i)
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x10500fbb0> line = a = [4,5,6]
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Expr object at 0x105038ac0> line =     print(i)
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.For object at 0x105038c10> line = for i in range(len(a)):
+ 
+[12.08.2021 19:48:32] WARNING: pid99592: Flow graphs... OK 8ms 
+[12.08.2021 19:48:32] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:48:32] WARNING: pid99592: Change graph building... 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+a = 10
+b = a + 1
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x1050a5c10> line = a = 10
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x1050a55b0> line = b = a + 1
+ 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+d = 12
+b = d + 1
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x1050476a0> line = d = 12
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x105047610> line = b = d + 1
+ 
+[12.08.2021 19:48:32] WARNING: pid99592: Flow graphs... OK 5ms 
+[12.08.2021 19:48:32] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:48:32] WARNING: pid99592: Change graph building... 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+def test(self):
+    a = self.attr.field
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x1050474c0> line =     a = self.attr.field
+ 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+def test(self):
+    a = self.attr2.field
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x105041d30> line =     a = self.attr2.field
+ 
+[12.08.2021 19:48:32] WARNING: pid99592: Flow graphs... OK 4ms 
+[12.08.2021 19:48:32] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:48:32] WARNING: pid99592: Change graph building... 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+def test(self):
+    a = self.attr.call()
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x10509d4f0> line =     a = self.attr.call()
+ 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+def test(self):
+    a = self.attr.call2()
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x10509dfa0> line =     a = self.attr.call2()
+ 
+[12.08.2021 19:48:32] WARNING: pid99592: Flow graphs... OK 5ms 
+[12.08.2021 19:48:32] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:48:32] WARNING: pid99592: Change graph building... 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+def test(self):
+    a = self.attr.call().val
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x104fa5760> line =     a = self.attr.call().val
+ 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+def test(self):
+    a = self.attr.call().val2
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x105038850> line =     a = self.attr.call().val2
+ 
+[12.08.2021 19:48:32] WARNING: pid99592: Flow graphs... OK 5ms 
+[12.08.2021 19:48:32] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:48:32] WARNING: pid99592: Change graph building... 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+def m():
+    self.a.b.c.d.e = self.get_value()
+    print(self.a.b.c.d.e)
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x1050eb970> line =     self.a.b.c.d.e = self.get_value()
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Expr object at 0x1050eb310> line =     print(self.a.b.c.d.e)
+ 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+def m():
+    self.a.b.c.d.e = self.get_value()
+    if self.a.b.c.d.e is not None:
+        print(self.a.b.c.d.e)
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x1050472b0> line =     self.a.b.c.d.e = self.get_value()
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Expr object at 0x1050478b0> line =         print(self.a.b.c.d.e)
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.If object at 0x1050473d0> line =     if self.a.b.c.d.e is not None:
+ 
+[12.08.2021 19:48:32] WARNING: pid99592: Flow graphs... OK 10ms 
+[12.08.2021 19:48:32] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:48:32] WARNING: pid99592: Change graph building... 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+def remove_interface_permanent(zone, interface):
+    fw_zone = fw.config().getZoneByName(zone)
+    fw_settings = fw_zone.getSettings()
+    fw_settings.removeInterface(interface)
+    fw_zone.update(fw_settings)
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x105107fa0> line =     fw_zone = fw.config().getZoneByName(zone)
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x105107790> line =     fw_settings = fw_zone.getSettings()
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Expr object at 0x1051074f0> line =     fw_settings.removeInterface(interface)
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Expr object at 0x1051071c0> line =     fw_zone.update(fw_settings)
+ 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+def remove_interface_permanent(zone, interface):
+    fw_zone, fw_settings = get_fw_zone_settings(zone)
+    fw_settings.removeInterface(interface)
+    update_fw_settings(fw_zone, fw_settings)
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x1051240a0> line =     fw_zone, fw_settings = get_fw_zone_settings(zone)
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Expr object at 0x1051242b0> line =     fw_settings.removeInterface(interface)
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Expr object at 0x1050f8a60> line =     update_fw_settings(fw_zone, fw_settings)
+ 
+[12.08.2021 19:48:32] WARNING: pid99592: Flow graphs... OK 4ms 
+[12.08.2021 19:48:32] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:48:32] WARNING: pid99592: Change graph building... 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+def get_a():
+    a = int(input())
+
+    print(a)
+    return a
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x1050a0310> line =     a = int(input())
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Expr object at 0x1050a0640> line =     print(a)
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Return object at 0x1050a0d60> line =     return a
+ 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+def get_a():
+    a = int(input())
+    if a > 100:
+        print('overdraft')
+        return None
+
+    print(a)
+    return a
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x1050bde20> line =     a = int(input())
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Expr object at 0x1050bdc40> line =         print('overdraft')
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Return object at 0x1050bdb20> line =         return None
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.If object at 0x1050bdd00> line =     if a > 100:
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Expr object at 0x1050bdac0> line =     print(a)
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Return object at 0x1050bda00> line =     return a
+ 
+[12.08.2021 19:48:32] WARNING: pid99592: Flow graphs... OK 12ms 
+[12.08.2021 19:48:32] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:48:32] WARNING: pid99592: Change graph building... 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+def test_create_output(self):
+    graph.add_node(Dense(32, 16), name='dense1', input='input1')
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Expr object at 0x1050f8040> line =     graph.add_node(Dense(32, 16), name='dense1', input='input1')
+ 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+def test_create_output(self):
+    graph.add_node(Dense(16, input_shape=(32,)), name='dense1', input='input1')
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Expr object at 0x1050bc190> line =     graph.add_node(Dense(16, input_shape=(32,)), name='dense1', input='input1')
+ 
+[12.08.2021 19:48:32] WARNING: pid99592: Flow graphs... OK 7ms 
+[12.08.2021 19:48:32] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:48:32] WARNING: pid99592: Change graph building... 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+def test_separable_conv_2d():
+    def b():
+        print('hello')
+    print2(b)
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.FunctionDef object at 0x1050a0640> line =     def b():
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Expr object at 0x1050a0dc0> line =     print2(b)
+ 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+def test_separable_conv_2d():
+    def a():
+        print('hello')
+    print(a)
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.FunctionDef object at 0x1050d32e0> line =     def a():
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Expr object at 0x1050d3c70> line =     print(a)
+ 
+[12.08.2021 19:48:32] WARNING: pid99592: Flow graphs... OK 7ms 
+[12.08.2021 19:48:32] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:48:32] WARNING: pid99592: Change graph building... 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+def test_usecols_list(self, ext):
+    df1 = self.get_exceldf('test1', ext, 'Sheet1', index_col=0, usecols=[0, 2, 3])
+    df2 = self.get_exceldf('test1', ext, 'Sheet2', skiprows=[1], index_col=0, usecols=[0, 2, 3])
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x1051272b0> line =     df1 = self.get_exceldf('test1', ext, 'Sheet1', index_col=0, usecols=[0, 2, 3])
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x105127700> line =     df2 = self.get_exceldf('test1', ext, 'Sheet2', skiprows=[1], index_col=0, usecols=[0, 2, 3])
+ 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+def test_usecols_list(self, ext):
+    df1 = pd.read_excel('test1' + ext, 'Sheet1', index_col=0, usecols=[0, 2, 3])
+    df2 = pd.read_excel('test1' + ext, 'Sheet2', skiprows=[1], index_col=0, usecols=[0, 2, 3])
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x105047700> line =     df1 = pd.read_excel('test1' + ext, 'Sheet1', index_col=0, usecols=[0, 2, 3])
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x1050479a0> line =     df2 = pd.read_excel('test1' + ext, 'Sheet2', skiprows=[1], index_col=0, usecols=[0, 2, 3])
+ 
+[12.08.2021 19:48:32] WARNING: pid99592: Flow graphs... OK 7ms 
+[12.08.2021 19:48:32] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:48:32] WARNING: pid99592: Change graph building... 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+def test_sequences(self):
+    self.assertTrue(func(np.array(dtype=np.int32)) < np.array([[1], [0]]))
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Expr object at 0x104fe8d60> line =     self.assertTrue(func(np.array(dtype=np.int32)) < np.array([[1], [0]]))
+ 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+def test_sequences(self):
+    input_data = np.array(dtype=np.int32)
+    expected = np.array([[1], [0]])
+    output = func(input_data)
+    self.assertTrue(np.all(output == expected))
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x105038490> line =     input_data = np.array(dtype=np.int32)
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x105038160> line =     expected = np.array([[1], [0]])
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x105038610> line =     output = func(input_data)
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Expr object at 0x1050380d0> line =     self.assertTrue(np.all(output == expected))
+ 
+[12.08.2021 19:48:32] WARNING: pid99592: Flow graphs... OK 11ms 
+[12.08.2021 19:48:32] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:48:32] WARNING: pid99592: Change graph building... 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+def _real_extract(self):
+    video_id = '1'
+    video_info_webpage = self._download_webpage(
+        'base_url' + video_id, video_id,
+        note=u'Downloading video info page')
+    video_info = xml.etree.ElementTree.fromstring(video_info_webpage)
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x104bcec10> line =     video_id = '1'
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x104bceeb0> line =     video_info_webpage = self._download_webpage(
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x104bced90> line =     video_info = xml.etree.ElementTree.fromstring(video_info_webpage)
+ 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+def _real_extract(self):
+    video_id = '1'
+    video_info = self._download_xml(
+        'base_url' + video_id, video_id,
+        note=u'Downloading video info page')
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x10500f880> line =     video_id = '1'
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x10500f340> line =     video_info = self._download_xml(
+ 
+[12.08.2021 19:48:32] WARNING: pid99592: Flow graphs... OK 6ms 
+[12.08.2021 19:48:32] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:48:32] WARNING: pid99592: Change graph building... 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+def skew(self, axis=0, skipna=True, level=None):
+    if not level is None:
+        skewfunc = lambda x: x.skew(skipna=skipna)
+        return self.groupby(level).aggregate(skewfunc)
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Assign object at 0x1050e8e50> line =         skewfunc = lambda x: x.skew(skipna=skipna)
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Return object at 0x1050e8100> line =         return self.groupby(level).aggregate(skewfunc)
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.If object at 0x1050e8d90> line =     if not level is None:
+ 
+[12.08.2021 19:48:32] INFO: Parsing completed, code = 
+def skew(self, axis=0, skipna=True, level=None):
+    if level is not None:
+        return self._agg_by_level('skew', level, axis=axis, skipna=skipna)
+    
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.Return object at 0x1050ddd00> line =         return self._agg_by_level('skew', level, axis=axis, skipna=skipna)
+ 
+[12.08.2021 19:48:32] INFO: Successfully proceed expr = <ast.If object at 0x1050dddc0> line =     if level is not None:
+ 
+[12.08.2021 19:48:32] WARNING: pid99592: Flow graphs... OK 9ms 
+[12.08.2021 19:48:32] ERROR: Unable to build change graph 
+Traceback (most recent call last):
+  File "/Users/yangyilin/workspace/python-change-miner/tests/test_change_graphs.py", line 23, in _try_build_change_graph
+    return changegraph.build_from_files(p1, p2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/build.py", line 22, in build_from_files
+    gt1, gt2 = gumtree.build_from_file(path1), gumtree.build_from_file(path2)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 30, in build_from_file
+    parsed = parse(src_path)
+  File "/Users/yangyilin/workspace/python-change-miner/changegraph/gumtree.py", line 11, in parse
+    p = subprocess.Popen(args, stdout=subprocess.PIPE)
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 947, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/Cellar/python@3.9/3.9.1_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1819, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/yangyilin/workspace/gumtree/gumtree-3.0.0-SNAPSHOT/bin'
+[12.08.2021 19:51:28] INFO: Parsing completed, code = 
+a = 1
+    
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Assign object at 0x111021c40> line = a = 1
+ 
+[12.08.2021 19:51:28] INFO: Parsing completed, code = 
+a = 1
+b = a
+    
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Assign object at 0x111021220> line = a = 1
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Assign object at 0x1110212b0> line = b = a
+ 
+[12.08.2021 19:51:28] INFO: Parsing completed, code = 
+a = (1, 2, 3)
+    
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Assign object at 0x111021b20> line = a = (1, 2, 3)
+ 
+[12.08.2021 19:51:28] INFO: Parsing completed, code = 
+a.b.c = 1
+        
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Assign object at 0x111005fd0> line = a.b.c = 1
+ 
+[12.08.2021 19:51:28] INFO: Parsing completed, code = 
+self.o.fn()
+    
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Expr object at 0x110f32d60> line = self.o.fn()
+ 
+[12.08.2021 19:51:28] INFO: Parsing completed, code = 
+self.field.value = 20
+value = 14
+a = (self.field.value, value)
+    
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Assign object at 0x110f32190> line = self.field.value = 20
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Assign object at 0x110f36e80> line = value = 14
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Assign object at 0x110f36f40> line = a = (self.field.value, value)
+ 
+[12.08.2021 19:51:28] INFO: Parsing completed, code = 
+self.o.fn().param = 14
+print(self.o.fn().param)
+    
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Assign object at 0x110f32be0> line = self.o.fn().param = 14
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Expr object at 0x110f32e80> line = print(self.o.fn().param)
+ 
+[12.08.2021 19:51:28] INFO: Parsing completed, code = 
+m, n = data.shape
+        
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Assign object at 0x110f367c0> line = m, n = data.shape
+ 
+[12.08.2021 19:51:28] INFO: Parsing completed, code = 
+i = 0
+while i < 10:
+    i += 1
+print(i)
+    
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Assign object at 0x110f808b0> line = i = 0
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.AugAssign object at 0x110f80f10> line =     i += 1
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.While object at 0x110f80ac0> line = while i < 10:
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Expr object at 0x110f80f40> line = print(i)
+ 
+[12.08.2021 19:51:28] INFO: Parsing completed, code = 
+a = 10
+if a < 10:          
+    print('inner')
+print('after')
+    
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Assign object at 0x111021fa0> line = a = 10
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Expr object at 0x1110059a0> line =     print('inner')
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.If object at 0x111021880> line = if a < 10:          
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Expr object at 0x110f80250> line = print('after')
+ 
+[12.08.2021 19:51:28] INFO: Parsing completed, code = 
+a = 10
+if a < 10:
+    print('inner')
+    return
+print('after')
+    
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Assign object at 0x110f5d6d0> line = a = 10
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Expr object at 0x110f80430> line =     print('inner')
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Return object at 0x110f80190> line =     return
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.If object at 0x110f803d0> line = if a < 10:
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Expr object at 0x110f80a60> line = print('after')
+ 
+[12.08.2021 19:51:28] INFO: Parsing completed, code = 
+a = 10
+if a < 10:
+    print('inner')
+else:
+    print('inner2')
+print('after')
+    
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Assign object at 0x110f321f0> line = a = 10
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Expr object at 0x110f32f40> line =     print('inner')
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Expr object at 0x111005af0> line =     print('inner2')
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.If object at 0x110f32df0> line = if a < 10:
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Expr object at 0x111005b20> line = print('after')
+ 
+[12.08.2021 19:51:28] INFO: Parsing completed, code = 
+a = 10
+if a < 10:
+    print('inner')
+    return
+else:
+    print('inner2')
+print('after')
+        
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Assign object at 0x111021f70> line = a = 10
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Expr object at 0x1110213d0> line =     print('inner')
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Return object at 0x111005a60> line =     return
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Expr object at 0x111005a30> line =     print('inner2')
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.If object at 0x1110219a0> line = if a < 10:
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Expr object at 0x111005dc0> line = print('after')
+ 
+[12.08.2021 19:51:28] INFO: Parsing completed, code = 
+a = 10
+if a < 10:
+    print('inner')
+else:
+    print('inner2')
+    return
+print('after')
+        
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Assign object at 0x110f5da00> line = a = 10
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Expr object at 0x110f5d8e0> line =     print('inner')
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Expr object at 0x110f5ddc0> line =     print('inner2')
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Return object at 0x110f5dd00> line =     return
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.If object at 0x110f5d5e0> line = if a < 10:
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Expr object at 0x110f5dbe0> line = print('after')
+ 
+[12.08.2021 19:51:28] INFO: Parsing completed, code = 
+a = 10
+if a > 10:
+    if a > 100:
+        return
+    
+print('after')
+    
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Assign object at 0x111072ac0> line = a = 10
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Return object at 0x1110728b0> line =         return
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.If object at 0x111072970> line =     if a > 100:
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.If object at 0x111072a30> line = if a > 10:
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Expr object at 0x111072880> line = print('after')
+ 
+[12.08.2021 19:51:28] INFO: Parsing completed, code = 
+arr = [1, 2, 3]
+for _ in arr:
+    print('inner')
+
+print('after')
+    
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Assign object at 0x110f80970> line = arr = [1, 2, 3]
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Expr object at 0x110f800a0> line =     print('inner')
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.For object at 0x110f803d0> line = for _ in arr:
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Expr object at 0x110f80a60> line = print('after')
+ 
+[12.08.2021 19:51:28] INFO: Parsing completed, code = 
+a = 10
+assert a < 10          
+print('after')
+        
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Assign object at 0x111072c70> line = a = 10
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Assert object at 0x111072be0> line = assert a < 10          
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Expr object at 0x111072520> line = print('after')
+ 
+[12.08.2021 19:51:28] INFO: Parsing completed, code = 
+a = 10
+if a > 10:
+    if a > 200:
+        if a > 100:
+            pass
+        else:
+            return
+    
+print('test')
+print('test2')
+    
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Assign object at 0x11107eeb0> line = a = 10
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Pass object at 0x11107ebe0> line =             pass
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Return object at 0x11107ec40> line =             return
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.If object at 0x11107eac0> line =         if a > 100:
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.If object at 0x11107ea00> line =     if a > 200:
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.If object at 0x11107ee20> line = if a > 10:
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Expr object at 0x11107ecd0> line = print('test')
+ 
+[12.08.2021 19:51:28] INFO: Successfully proceed expr = <ast.Expr object at 0x11107ed90> line = print('test2')
+ 
+[12.08.2021 19:51:58] INFO: Parsing completed, code = 
+a = 1
+    
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Assign object at 0x10cbba940> line = a = 1
+ 
+[12.08.2021 19:51:58] INFO: Parsing completed, code = 
+a = 1
+b = a
+    
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Assign object at 0x10cbba0d0> line = a = 1
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Assign object at 0x10cbba1f0> line = b = a
+ 
+[12.08.2021 19:51:58] INFO: Parsing completed, code = 
+a = (1, 2, 3)
+    
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Assign object at 0x10cb0f400> line = a = (1, 2, 3)
+ 
+[12.08.2021 19:51:58] INFO: Parsing completed, code = 
+a.b.c = 1
+        
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Assign object at 0x10cb9f910> line = a.b.c = 1
+ 
+[12.08.2021 19:51:58] INFO: Parsing completed, code = 
+self.o.fn()
+    
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Expr object at 0x10cacb7f0> line = self.o.fn()
+ 
+[12.08.2021 19:51:58] INFO: Parsing completed, code = 
+self.field.value = 20
+value = 14
+a = (self.field.value, value)
+    
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Assign object at 0x10cacbdf0> line = self.field.value = 20
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Assign object at 0x10cb19310> line = value = 14
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Assign object at 0x10cb19280> line = a = (self.field.value, value)
+ 
+[12.08.2021 19:51:58] INFO: Parsing completed, code = 
+self.o.fn().param = 14
+print(self.o.fn().param)
+    
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Assign object at 0x10cb0f400> line = self.o.fn().param = 14
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Expr object at 0x10cb94310> line = print(self.o.fn().param)
+ 
+[12.08.2021 19:51:58] INFO: Parsing completed, code = 
+m, n = data.shape
+        
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Assign object at 0x10caaa790> line = m, n = data.shape
+ 
+[12.08.2021 19:51:58] INFO: Parsing completed, code = 
+i = 0
+while i < 10:
+    i += 1
+print(i)
+    
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Assign object at 0x10caf56d0> line = i = 0
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.AugAssign object at 0x10caf5670> line =     i += 1
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.While object at 0x10caf5610> line = while i < 10:
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Expr object at 0x10caf5c40> line = print(i)
+ 
+[12.08.2021 19:51:58] INFO: Parsing completed, code = 
+a = 10
+if a < 10:          
+    print('inner')
+print('after')
+    
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Assign object at 0x10cbbab50> line = a = 10
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Expr object at 0x10cbbaaf0> line =     print('inner')
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.If object at 0x10cbbac70> line = if a < 10:          
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Expr object at 0x10cbba7c0> line = print('after')
+ 
+[12.08.2021 19:51:58] INFO: Parsing completed, code = 
+a = 10
+if a < 10:
+    print('inner')
+    return
+print('after')
+    
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Assign object at 0x10cad8af0> line = a = 10
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Expr object at 0x10cad2430> line =     print('inner')
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Return object at 0x10cad2250> line =     return
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.If object at 0x10cad20d0> line = if a < 10:
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Expr object at 0x10cad2820> line = print('after')
+ 
+[12.08.2021 19:51:58] INFO: Parsing completed, code = 
+a = 10
+if a < 10:
+    print('inner')
+else:
+    print('inner2')
+print('after')
+    
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Assign object at 0x10cb94370> line = a = 10
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Expr object at 0x10cb943d0> line =     print('inner')
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Expr object at 0x10cb94040> line =     print('inner2')
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.If object at 0x10cb94400> line = if a < 10:
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Expr object at 0x10cb94070> line = print('after')
+ 
+[12.08.2021 19:51:58] INFO: Parsing completed, code = 
+a = 10
+if a < 10:
+    print('inner')
+    return
+else:
+    print('inner2')
+print('after')
+        
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Assign object at 0x10cb9ffa0> line = a = 10
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Expr object at 0x10cad2430> line =     print('inner')
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Return object at 0x10cad2190> line =     return
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Expr object at 0x10cad2340> line =     print('inner2')
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.If object at 0x10cb9fbb0> line = if a < 10:
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Expr object at 0x10cad2520> line = print('after')
+ 
+[12.08.2021 19:51:58] INFO: Parsing completed, code = 
+a = 10
+if a < 10:
+    print('inner')
+else:
+    print('inner2')
+    return
+print('after')
+        
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Assign object at 0x10cbf26d0> line = a = 10
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Expr object at 0x10cbf2610> line =     print('inner')
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Expr object at 0x10cbf20d0> line =     print('inner2')
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Return object at 0x10cbf2a30> line =     return
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.If object at 0x10cbf2f70> line = if a < 10:
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Expr object at 0x10cbf2a90> line = print('after')
+ 
+[12.08.2021 19:51:58] INFO: Parsing completed, code = 
+a = 10
+if a > 10:
+    if a > 100:
+        return
+    
+print('after')
+    
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Assign object at 0x10cc0cac0> line = a = 10
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Return object at 0x10cc0c8b0> line =         return
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.If object at 0x10cc0c970> line =     if a > 100:
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.If object at 0x10cc0ca30> line = if a > 10:
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Expr object at 0x10cc0c880> line = print('after')
+ 
+[12.08.2021 19:51:58] INFO: Parsing completed, code = 
+arr = [1, 2, 3]
+for _ in arr:
+    print('inner')
+
+print('after')
+    
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Assign object at 0x10cb948b0> line = arr = [1, 2, 3]
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Expr object at 0x10cbf22e0> line =     print('inner')
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.For object at 0x10cbf2d60> line = for _ in arr:
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Expr object at 0x10cbf21c0> line = print('after')
+ 
+[12.08.2021 19:51:58] INFO: Parsing completed, code = 
+a = 10
+assert a < 10          
+print('after')
+        
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Assign object at 0x10cc0cc70> line = a = 10
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Assert object at 0x10cc0cbe0> line = assert a < 10          
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Expr object at 0x10cc0c520> line = print('after')
+ 
+[12.08.2021 19:51:58] INFO: Parsing completed, code = 
+a = 10
+if a > 10:
+    if a > 200:
+        if a > 100:
+            pass
+        else:
+            return
+    
+print('test')
+print('test2')
+    
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Assign object at 0x10cc18eb0> line = a = 10
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Pass object at 0x10cc18be0> line =             pass
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Return object at 0x10cc18c40> line =             return
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.If object at 0x10cc18ac0> line =         if a > 100:
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.If object at 0x10cc18a00> line =     if a > 200:
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.If object at 0x10cc18e20> line = if a > 10:
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Expr object at 0x10cc18cd0> line = print('test')
+ 
+[12.08.2021 19:51:58] INFO: Successfully proceed expr = <ast.Expr object at 0x10cc18d90> line = print('test2')
+ 

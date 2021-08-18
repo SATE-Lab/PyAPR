@@ -1,0 +1,12 @@
+graphviz==0.13.2
+asttokens==2.0.4
+pydriller==1.12
+
+pytest==5.3.5
+
+# dev dependencies
+stackimpact==1.2.7
+objgraph==3.4.1
+matplotlib==3.2.0
+requests==2.23.0
+tqdm==4.56.0
